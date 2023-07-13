@@ -1,0 +1,2 @@
+export AMPL_LICFILE="/home/tomek/.ampl/ampl.lic"
+export AMPLKEY_RUNTIME_DIR="/home/tomek/.ampl/"

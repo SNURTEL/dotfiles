@@ -1,0 +1,12 @@
+[user]
+	name = Tomasz Owienko
+	email = tomek.owienko@gmail.com
+[credential]
+	helper = store
+	helper = 
+	helper = /usr/local/bin/git-credential-manager
+	credentialStore = gpg
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "https://gitlab-stud.elka.pw.edu.pl"]
+	provider = generic
