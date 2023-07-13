@@ -1,0 +1,17 @@
+[Unit]
+Description=rclonemount
+AssertPathIsDirectory=/home/tomek/gdrive-tomek1/
+After=network-online.target
+
+[Service]
+Type=simple
+; User=tomek
+; Group=tomek
+ExecStart=/usr/bin/rclone mount gdrive-tomek1: /home/tomek/gdrive-tomek1/ --vfs-cache-mode full --vfs-cache-max-age 10000h --vfs-write-back 30s --dir-cache-time 80h --vfs-cache-poll-interval 30s --buffer-size=2G --log-level=NOTICE --log-file=/home/tomek/.rclone.log --allow-non-empty
+ExecStop=/bin/fusermount -u /home/tomek/gdrive-tomek1/
+ExecReload=/bin/fusermount -u /home/tomek/gdrive-tomek1/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

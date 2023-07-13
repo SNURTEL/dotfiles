@@ -1,0 +1,10 @@
+[Unit]
+Description=update power draw in top bar
+
+[Service]
+Type=simple
+ExecStart=/home/tomek/.config/systemd/user/update_power.sh 3
+
+[Install]
+WantedBy=default.target
+
