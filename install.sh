@@ -12,6 +12,10 @@ DOTFILES=(
     .zsh_aliases
     .zshrc
     .config/ranger
+    .config/nvim
+    .config/kitty
+    .config/burn-my-windows
+    .config/neofetch
 )
 
 
@@ -44,4 +48,7 @@ do
     systemctl --user enable $SERVICE
     systemctl --user start $SERVICE
 done
+
+cd ..
+
 
