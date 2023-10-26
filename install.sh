@@ -25,30 +25,30 @@ do
 done
 
 
-cd services
-mkdir ~/.config/systemd
-mkdir ~/.config/systemd/user
+#cd services
+#mkdir ~/.config/systemd
+#mkdir ~/.config/systemd/user
 
 # install as user services, enable and start
-SERVICES=(
-    rclonemount.service
-    update_power_box.service
-)
-SERVICE_FILES=(
-    update_power.sh
-)
+#SERVICES=(
+#    rclonemount.service
+#    update_power_box.service
+#)
+#SERVICE_FILES=(
+#    update_power.sh
+#)
 
-for S in ${SERVICES[*]} ${SERVICE_FILES[*]}
-do
-    ln -vs $PWD/$S ~/.config/systemd/user/
-done
+#for S in ${SERVICES[*]} ${SERVICE_FILES[*]}
+#do
+#    ln -vs $PWD/$S ~/.config/systemd/user/
+#done
 
-for SERVICE in ${SERVICES[*]}
-do
-    systemctl --user enable $SERVICE
-    systemctl --user start $SERVICE
-done
+#for SERVICE in ${SERVICES[*]}
+#do
+#    systemctl --user enable $SERVICE
+#    systemctl --user start $SERVICE
+#done
 
-cd ..
+#cd ..
 
 
