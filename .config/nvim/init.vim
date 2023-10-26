@@ -92,6 +92,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
     UpdateRemotePlugins
   endfunction
 
+Plug 'xuhdev/vim-latex-live-preview'
 Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
 Plug 'tpope/vim-vinegar'
 Plug 'dstein64/vim-startuptime'
@@ -151,6 +152,10 @@ let g:mkdp_browser = '/usr/bin/firefox'
 " improved wild menu
 call wilder#setup({'modes': [':', '/', '?']})
 
+" latex preview
+autocmd Filetype tex setl updatetime=1
+let g:livepreview_previewer = 'gv'
+
 " hop
 " NOTE - hop devs recommend pinning a certain version of the plugin to prevent
 " pulling unstable updates. If something breaks, you know where to look for
@@ -186,7 +191,8 @@ lua << EOF
             "kotlin_language_server", 
             "marksman", 
             "lemminx",
-            "yamlls" 
+            "yamlls",
+            "texlab"
             },
         -- automatic_installation = true  -- this would work the other way around - setup, then auto-install
         }
