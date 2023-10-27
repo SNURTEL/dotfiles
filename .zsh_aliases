@@ -24,3 +24,4 @@ alias 'nivm'='nvim'
 # dirs
 alias 's3'='cd $SEM3'
 alias 's4'='cd $SEM4'
+alias 's5'='cd $SEM5'

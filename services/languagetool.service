@@ -1,0 +1,13 @@
+[Unit]
+Description=LanguageTool Service
+
+[Service]
+WorkingDirectory=/snap/languagetool/current/
+ExecStart=xvfb-run -a /snap/bin/languagetool --http --port 8081 --allow-origin "localhost" 
+; User=www-data
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target

@@ -33,6 +33,7 @@ done
 #SERVICES=(
 #    rclonemount.service
 #    update_power_box.service
+#    languagetool.service
 #)
 #SERVICE_FILES=(
 #    update_power.sh

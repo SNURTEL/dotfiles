@@ -130,6 +130,7 @@ export PATH=$PATH:/home/tomek/.local/bin
 
 export SEM3=$HOME/gdrive-tomek1/Notatki/SEM3
 export SEM4=$HOME/gdrive-tomek1/Notatki/SEM4
+export SEM5=$HOME/gdrive-tomek1/Notatki/SEM5
 
 
 export GCM_CREDENTIAL_STORE="gpg"
